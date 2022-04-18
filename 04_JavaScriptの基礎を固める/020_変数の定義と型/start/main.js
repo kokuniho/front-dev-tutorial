@@ -9,3 +9,4 @@ variable = 12;
 variable = false;
 variable = undefined;
 
+//静的
