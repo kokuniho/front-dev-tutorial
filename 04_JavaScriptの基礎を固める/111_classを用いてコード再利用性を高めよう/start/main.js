@@ -20,3 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
         return `${acc}<span class="char">${curr}</span>`;
     }, "");
 });
+
+class TextAnimation {
+    constructor(el){
+        this.el = document.querySelector(el);
+        this.chars = el.innerHTML.trim().split("");
+        // alert(el);
+        this.el.innerHTML = this._splitText();
+    }
+    _splitText() {
+        return this.chars.reduce((acc, curr) => {
+            curr = curr.replace(/|s+/, '&nbsp');
+            return `${acc}<span class="char">${curr}</span>`;
+        })
+    }
+    log() {
+        console.log(this.el);
+    }
+}
+const ta = new TextAnimation('hello world');
+ta.log();
+// alert(ta.el);
