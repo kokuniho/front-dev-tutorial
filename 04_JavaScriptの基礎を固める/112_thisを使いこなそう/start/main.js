@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     ta.animate();
     ta2.animate();
 });
+ 
+console.log(this);
 
 class TextAnimation {
     constructor(el) {
+        console.log(this);
         this.el = document.querySelector(el);
         this.chars = this.el.innerHTML.trim().split("");
         this.el.innerHTML = this._splitText();
@@ -18,6 +21,12 @@ class TextAnimation {
         }, "");
     }
     animate() {
-        this.el.classList.toggle('inview');
+        const _that = this;
+        
+        window.setTimeout(function(){
+          console.log(_that);
+          _that.el.classList.toggle('inview');
+        });
+        
     }
 }
