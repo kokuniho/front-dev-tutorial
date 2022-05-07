@@ -9,7 +9,7 @@ const obj = {
         window.setTimeout(fn);  
     }
 }
-
+//thisはobjを参照するためのキーワード！！
 class MyObj {
     constructor() {
         this.first_name = 'Mafia';
