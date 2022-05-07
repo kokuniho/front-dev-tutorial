@@ -27,7 +27,5 @@ class TextAnimation {
             console.log(_that);
             this.el.classList.toggle('inview');
         }.bind(_that));
-        
-    
     }
 }
