@@ -22,6 +22,7 @@ class MobileMenu {
   }
   _addEvent(){
     this.DOM.btn.addEventListener('click', this._toggle.bind(this));
+    this.DOM.cover.addEventListener('click', this._toggle.bind(this));
   }
 }
 
